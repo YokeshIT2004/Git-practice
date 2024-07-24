@@ -11,6 +11,11 @@ app.get("/hello-world" , (req ,res) => {
     res.send("Hello World");
 });
 
+app.get("/hello/:name" , (req,res) => {
+    const name = req.params.name;
+    res.send(`Hello ${name}`);
+})
+
 app.listen(PORT,()=>{
     console.log(`Server is running ${PORT}`);
 });
