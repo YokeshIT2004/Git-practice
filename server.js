@@ -14,7 +14,11 @@ app.get("/hello-world" , (req ,res) => {
 app.get("/hello/:name" , (req,res) => {
     const name = req.params.name;
     res.send(`Hello ${name}`);
-})
+});
+
+app.get("/user" , (req , res) => {
+    res.send("This is user route");
+});
 
 app.listen(PORT,()=>{
     console.log(`Server is running ${PORT}`);
